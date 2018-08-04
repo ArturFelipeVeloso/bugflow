@@ -30,15 +30,23 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bugflow.home',
 ]
+
+THIRD_APPS = []
+
+PROJECT_APPS = [
+    'bugflow.home',
+    'bugflow.accounts',
+]
+
+INSTALLED_APPS = DJANGO_APPS + THIRD_APPS + PROJECT_APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
